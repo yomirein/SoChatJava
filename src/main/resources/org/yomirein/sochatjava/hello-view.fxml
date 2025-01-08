@@ -11,25 +11,27 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.layout.GridPane?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+
+<VBox alignment="BOTTOM_LEFT" xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.yomirein.sochatjava.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
     </padding>
 
 
     <HBox>
-        <Label text="Text:"
-               GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        <TextField prefHeight="-Infinity"/>
     </HBox>
 
-    <HBox spacing="10" alignment="bottom_right"
-          GridPane.columnIndex="1" GridPane.rowIndex="4">
+
+    <HBox>
+        <TextField/>
+        <HBox spacing="10">
 
 
-        <Button text="Send"
-                onAction="#handleSubmitButtonAction"/>
+            <Button text="Send"
+                    onAction="#handleSubmitButtonAction"/>
+        </HBox>
     </HBox>
 
     <Text fx:id="actiontarget"
