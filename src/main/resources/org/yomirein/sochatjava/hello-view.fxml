@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.layout.GridPane?>
+<VBox prefHeight="400" prefWidth="300" spacing="10" style="-fx-padding: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yomirein.sochatjava.ChatController">
+   <HBox spacing="10">
+      <children>
+         <Button fx:id="button1" onAction="#touch" text="Server" />
+         <Button fx:id="button11" onAction="#touch" text="oogabooga" />
+      </children>
+   </HBox>
+    <VBox fx:id="spacer" VBox.vgrow="ALWAYS">
+      <children>
+          <ScrollPane fx:id="scrollPane" fitToWidth="true" VBox.vgrow="ALWAYS">
+              <content>
+                  <Label fx:id="textLabel" text="Ай лев ай доля воровская ай бабка процентщица" wrapText="true" />
+              </content>
+          </ScrollPane>
+      </children></VBox>
 
-
-<VBox alignment="BOTTOM_LEFT" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.yomirein.sochatjava.HelloController">
-    <padding>
-        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
-    </padding>
-
-
-    <HBox>
-        <TextField prefHeight="-Infinity"/>
+    <HBox spacing="10">
+        <TextField fx:id="textField" HBox.hgrow="ALWAYS" />
+        <Button fx:id="button" onAction="#handleSubmitButtonAction" text="Кнопка" />
     </HBox>
-
-
-    <HBox>
-        <TextField/>
-        <HBox spacing="10">
-
-
-            <Button text="Send"
-                    onAction="#handleSubmitButtonAction"/>
-        </HBox>
-    </HBox>
-
-    <Text fx:id="actiontarget"
-          GridPane.columnIndex="1" GridPane.rowIndex="6"/>
 </VBox>
