@@ -24,4 +24,12 @@ public class ChatController {
         Button button = (Button) actionEvent.getSource();
         button.setDisable(true);
     }
+
+    public void connectServer(ActionEvent actionEvent) {
+        textLabel.setText(textLabel.getText() + "\n" + "Connecting to server");
+    }
+
+    public void disconnectServer(ActionEvent actionEvent) {
+        textLabel.setText(textLabel.getText() + "\n" + "Disconnecting from server");
+    }
 }

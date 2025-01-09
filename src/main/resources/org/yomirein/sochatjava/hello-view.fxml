@@ -6,12 +6,19 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <VBox prefHeight="400" prefWidth="300" spacing="10" style="-fx-padding: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yomirein.sochatjava.ChatController">
    <HBox spacing="10">
       <children>
-         <Button fx:id="button1" onAction="#touch" text="Server" />
-         <Button fx:id="button11" onAction="#touch" text="oogabooga" />
+          <MenuButton text="Panel">
+              <items>
+                  <MenuItem text="Connect" onAction="#connectServer"/>
+                  <MenuItem text="Disconnect" onAction="#disconnectServer"/>
+              </items>
+          </MenuButton>
+          <Button fx:id="button1" onAction="#touch" text="Server" />
+          <Button fx:id="button11" onAction="#touch" text="oogabooga" />
       </children>
    </HBox>
     <VBox fx:id="spacer" VBox.vgrow="ALWAYS">
@@ -24,7 +31,7 @@
       </children></VBox>
 
     <HBox spacing="10">
-        <TextField fx:id="textField" HBox.hgrow="ALWAYS" />
-        <Button fx:id="button" onAction="#handleSubmitButtonAction" text="Кнопка" />
+        <TextField promptText="Write a message" fx:id="textField" HBox.hgrow="ALWAYS" />
+        <Button fx:id="button" onAction="#handleSubmitButtonAction" text="Send" />
     </HBox>
 </VBox>
